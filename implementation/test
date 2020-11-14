@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+#include "CricketPlayer.c"
+
+int main()
+{
+struct cricket player[100];
+int i,n;
+printf("how many player\n");
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{
+	printf("\nINPUT THE NAME OF PLAYER %d : ",i+1);
+	scanf("%s",player[i].nm);
+	printf("\nINPUT THE TEAM NAME OF PLAYER %d : ",i+1);
+	scanf("%s",player[i].tnm);
+	printf("\nINPUT THE BATTING AVERAGE OF PLAYER %d : ",i+1);
+	scanf("%d",&player[i].btavg);
+}
+cri_pnt(player,n);
+return 0;	
+}
